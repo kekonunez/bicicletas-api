@@ -16,11 +16,13 @@ class BicicletaFactory extends Factory
      */
     public function definition(): array
     {
+        // Create bicicletas  but with foto_url from imgs/bicicletas/bicicleta1.jpg to bicicleta5.jpg
+
         return [
-            'marca' => $this->faker->word,
-            'modelo' => $this->faker->word,
+            'marca' => $this->faker->company,
+            'modelo' => $this->faker->lastName,
             'precio_por_hora' => $this->faker->randomFloat(0, 100, 1000),
-            'foto_url' => 'imgs/bicicletas/bici'
+            'foto_url' => 'imgs/bicicletas/bicicleta' . $this->faker->numberBetween(1, 8) . '.png',
         ];
     }
 }
