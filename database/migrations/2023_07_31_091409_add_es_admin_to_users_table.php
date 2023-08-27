@@ -16,14 +16,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('es_admin')->default(false);
         });
-
-        // create user admin
-        $user = new User();
-        $user->name = 'admin';
-        $user->email = 'admin@admin';
-        $user->password = Hash::make('admin');
-        $user->es_admin = true;
-        $user->save();
     }
 
     /**
