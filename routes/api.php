@@ -36,5 +36,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('bicicletas', BicicletaController::class)->except(['index', 'show'])->middleware('es_admin');
 });
 
-Route::post('auth/registro', RegistroController::class);
-Route::post('auth/login', LoginController::class);
+Route::post('auth/registro', RegistroController::class)->name('registro');
+Route::post('auth/login', LoginController::class)->name('login');
