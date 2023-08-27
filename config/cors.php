@@ -29,6 +29,7 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    // Cambio necesario para CORS
+    'supports_credentials' => true,
 
 ];
