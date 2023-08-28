@@ -21,7 +21,7 @@ class AlquilerFactory extends Factory
             'hora_final' => null,
             'precio_total' => null,
             'user_id' => $this->faker->numberBetween(2, 10),
-            'bicicleta_id' => $this->faker->unique()->numberBetween(1, 20),
+            'bicicleta_id' => $this->faker->unique()->numberBetween(1, 30),
         ];
     }
 

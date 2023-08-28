@@ -12,6 +12,6 @@ class BicicletaSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Bicicleta::factory()->count(20)->create();
+        \App\Models\Bicicleta::factory()->count(30)->create();
     }
 }
