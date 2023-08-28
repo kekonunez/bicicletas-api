@@ -18,6 +18,7 @@ class AlquilerController extends Controller
     public function index(Request $request)
     {
         $alquileres = Alquiler::where('user_id', $request->user()->id)
+            ->orderby('hora_final', 'desc')
             ->paginate();
         return AlquilerResource::collection($alquileres);
     }
